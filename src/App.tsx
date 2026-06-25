@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
@@ -37,7 +37,7 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <LoadingScreen />
       <div className="grain" />
@@ -46,6 +46,6 @@ export default function App() {
         <AnimatedRoutes />
       </main>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
